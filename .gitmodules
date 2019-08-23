@@ -1,0 +1,9 @@
+[submodule "isitup"]
+	path = isitup
+	url = https://github.com/theycallmemac/isitup
+[submodule "nslookup_faas"]
+	path = nslookup_faas
+	url = https://github.com/JockDaRock/nslookup_faas
+[submodule "openfaas-certinfo"]
+	path = openfaas-certinfo
+	url = https://github.com/stefanprodan/openfaas-certinfo
