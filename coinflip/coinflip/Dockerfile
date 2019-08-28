@@ -4,20 +4,10 @@ FROM alpine:3.9
 
 RUN apk add bash
 
-RUN mkdir -p /home/app
-
 COPY ./flip.sh /tmp/flip.sh
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
-
-# Add non root user
-RUN addgroup -S app && adduser app -S -G app
-RUN chown app /home/app
-
-WORKDIR /home/app
-
-USER app
 
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
 ENV fprocess="bash /tmp/flip.sh"
