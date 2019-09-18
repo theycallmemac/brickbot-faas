@@ -4,7 +4,8 @@ FROM alpine:3.9
 
 RUN apk add bash curl jq 
 
-RUN curl -s https://gist.githubusercontent.com/theycallmemac/5b401a0475011206a4944f531719c643/raw/b0f30122804de2908e71608db21528167e0fa43f/botinfo > botinfo
+RUN curl -s https://gist.githubusercontent.com/theycallmemac/5b401a0475011206a4944f531719c643/raw/750cb12eab73fcdf3efdfdd975415e67c17257f3/botinfo > botinfo
+
 RUN curl -s https://raw.githubusercontent.com/theycallmemac/brickbot/master/package.json > package.json
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
