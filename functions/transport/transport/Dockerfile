@@ -2,14 +2,14 @@ FROM openfaas/classic-watchdog:0.13.4 as watchdog
 
 FROM alpine:3.9
 
-RUN apk add nodejs npm
+RUN apk add nodejs npm curl
 
 ADD ./dublinbus-luas-api /api
 
 COPY --from=watchdog /fwatchdog /usr/bin/fwatchdog
 RUN chmod +x /usr/bin/fwatchdog
 
-RUN cd /api
+WORKDIR /api
 RUN npm install
 RUN npm start &
 
