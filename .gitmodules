@@ -7,3 +7,9 @@
 [submodule "openfaas-certinfo"]
 	path = openfaas-certinfo
 	url = https://github.com/stefanprodan/openfaas-certinfo
+[submodule "bus-and-luas/transport/dublinbus-luas-api"]
+	path = bus-and-luas/transport/dublinbus-luas-api
+	url = https://github.com/RoryH/dublinbus-luas-api
+[submodule "wiki/wiki/brickbot-wiki"]
+	path = wiki/wiki/brickbot-wiki
+	url = https://github.com/ciankehoe/brickbot-wiki
