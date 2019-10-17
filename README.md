@@ -1,7 +1,50 @@
 # brickbot-faas
 
-A collection of function configs that give functionality to brickbot. These are being run using OpenFaaS. They're on Github for redundancy but also for folks to have a look at.
+A collection of function configs and code that gives functionality to [brickbot](https://github.com/redbrick/brickbot). These are run using OpenFaaS. 
 
-There are lots of resources out there for OpenFaaS, I think [this blog](https://medium.com/@thomas.shaw78/bash-functions-as-a-service-b4033bc1ee97) is one of the best to get started with.
+I've written a tool called `faasup` which actually abstracts a lot of the work in maintaining OpenFaaS away from the user. You can run batch build and deploys for all functions rather than maintaining each individual one.
 
-If you want to add some configs in here feel free to make a PR!
+### faasup
+
+#### Installing
+
+faasup is built in Go. There's a Makefile in here, so to install faasup just run `make`. This should grab all the dependencies you need too. You can view the help guide by running `./faasup --help`. You should always run faasup from this location.
+
+#### Usage 
+
+You can view the help guide by running `./faasup --help`. You should always run faasup from this location and should always use the tool as the root user.
+
+To list the current functions run `faasup list`. 
+
+To build a specific fuction just run `faasup build -f $functionName`. If you want to build all functions just run `faasup build -a`.
+
+To deploy a specific fuction just run `faasup deploy -f $functionName`. If you want to deploy all functions just run `faasup build -a`.
+
+By default the build and deploy subcommands dont log output verbosely. To change this just supply the `--verbose` flag at the end of eithe rof those commands.
+
+
+### Contibuting
+
+If you want to add some configs and code in here feel free to make a PR! OpenFaaS supports languages and thus many ways to build your function, so go crazy!
+
+### Help Guide
+
+```
+manage the brickbot openfaas functions
+
+Usage:
+  faasup [command]
+
+Available Commands:
+  build       build a specified function
+  deploy      deploy a specified function
+  help        Help about any command
+  list        list usable functions
+
+Flags:
+  -h, --help   help for faasup
+
+Use "faasup [command] --help" for more information about a command.
+
+
+```
