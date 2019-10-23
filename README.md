@@ -39,7 +39,9 @@ Available Commands:
   build       build a specified function
   deploy      deploy a specified function
   help        Help about any command
+  info        display info for a specified function
   list        list usable functions
+  make        make a new function
 
 Flags:
   -h, --help   help for faasup
