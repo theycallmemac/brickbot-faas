@@ -1,0 +1,18 @@
+[submodule "functions/nslookup_faas"]
+	path = functions/nslookup
+	url = https://github.com/JockDaRock/nslookup_faas.git
+[submodule "functions/isitup"]
+	path = functions/isitup
+	url = https://github.com/theycallmemac/isitup.git
+[submodule "functions/openfaas-certinfo"]
+	path = functions/openfaas-certinfo
+	url = https://github.com/stefanprodan/openfaas-certinfo.git
+[submodule "functions/transport/transport/dublinbus-luas-api"]
+	path = functions/transport/transport/dublinbus-luas-api
+	url = https://github.com/RoryH/dublinbus-luas-api
+[submodule "functions/wiki/wiki/brickbot-wiki"]
+	path = functions/wiki/wiki/brickbot-wiki
+	url = https://github.com/ciankehoe/brickbot-wiki
+[submodule "functions/tt/tt/dcu-opentimetable"]
+	path = functions/tt/tt/dcu-opentimetable
+	url = https://github.com/Frazl/dcu-opentimetable
