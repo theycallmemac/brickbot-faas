@@ -13,7 +13,7 @@ RUN go get github.com/skip2/go-qrcode
 
 RUN go build /qr.go
 # Populate example here - i.e. "cat", "sha512sum" or "node index.js"
-ENV fprocess="xargs ./qr "
+ENV fprocess="xargs /go/qr"
 # Set to true to see request in function logs
 ENV write_debug="false"
 
