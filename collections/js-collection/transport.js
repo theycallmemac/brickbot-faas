@@ -7,7 +7,7 @@ http.get("http://localhost:8000/"+type+"/stop/"+stop, (resp) => {
     data += chunk;
   });
   resp.on('end', () => {
-    console.log(JSON.parse(data));
+    console.log(data);
   });
 }).on("error", (err) => {
   console.log("Error: " + err.message);
