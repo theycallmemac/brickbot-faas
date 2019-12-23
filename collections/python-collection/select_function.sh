@@ -12,15 +12,15 @@
       shift # move to next kv pair
   done
 
-if [ -z /${function}.js ];then
+if [ -z /functions/${function}.js ];then
     exit 1
 else
-    if [ ! -f /${function}.py ];then
+    if [ ! -f /functions/${function}.py ];then
         echo "Function does not exist : ${function}. Exiting"
         exit 1
     fi
 fi
-python3 /${function}.py ${argument}
+python3 /functions/${function}.py ${argument}
 
 exit $?
 

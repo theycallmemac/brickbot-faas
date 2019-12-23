@@ -5,8 +5,7 @@ RUN echo "Pulling watchdog binary from Github." \
     && chmod +x /usr/bin/fwatchdog \
     && cp /usr/bin/fwatchdog /
 ADD select_function.sh /select_function.sh
-ADD wiki.py /wiki.py
-ADD dcurooms.py /dcurooms.py
+ADD functions /functions
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install requests bs4
 ENV fprocess="xargs bash /select_function.sh"
