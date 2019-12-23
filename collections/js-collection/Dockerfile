@@ -5,10 +5,8 @@ RUN echo "Pulling watchdog binary from Github." \
     && chmod +x /usr/bin/fwatchdog \
     && cp /usr/bin/fwatchdog /
 ADD select_function.sh /select_function.sh
-ADD dublinbus-luas-api /api
-ADD uptime.js /uptime.js
-ADD transport.js /transport.js
-WORKDIR /api
+ADD functions /functions
+WORKDIR /functions/dublinbus-luas-api
 RUN npm install
 RUN npm start &
 ENV fprocess="xargs bash /select_function.sh"

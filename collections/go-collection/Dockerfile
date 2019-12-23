@@ -6,9 +6,10 @@ RUN echo "Pulling watchdog binary from Github." \
     && cp /usr/bin/fwatchdog /
 ADD select_function.sh /select_function.sh
 ADD functions /functions
-RUN go get github.com/skip2/go-qrcode
+RUN go get github.com/skip2/go-qrcode github.com/dustin/go-humanize
 RUN go build /functions/pwned/pwned.go
 RUN go build /functions/qr/qr.go
+RUN go build /functions/ssl/ssl.go
 ENV fprocess="xargs bash /select_function.sh"
 ENV write_debug="true"
 EXPOSE 8080
