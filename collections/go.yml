@@ -1,0 +1,8 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+functions:
+  go-collection:
+    lang: dockerfile
+    handler: ./go-collection
+    image: theycallmemac/go:latest
