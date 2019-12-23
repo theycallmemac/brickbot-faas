@@ -13,3 +13,6 @@
 [submodule "functions/wiki/wiki/brickbot-wiki"]
 	path = functions/wiki/wiki/brickbot-wiki
 	url = https://github.com/ciankehoe/brickbot-wiki
+[submodule "functions/movie/movie/should-i-watch-this"]
+	path = functions/movie/movie/should-i-watch-this
+	url = https://github.com/koffeinfrei/should-i-watch-this

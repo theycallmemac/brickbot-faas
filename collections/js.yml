@@ -1,0 +1,8 @@
+provider:
+  name: faas
+  gateway: http://127.0.0.1:8080
+functions:
+  js-collection:
+    lang: dockerfile
+    handler: ./js-collection
+    image: theycallmemac/js:latest
